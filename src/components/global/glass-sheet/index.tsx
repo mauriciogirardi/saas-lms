@@ -17,7 +17,9 @@ export function GlassSheet({
 }: GlassSheetProps) {
   return (
     <Sheet>
-      <SheetTrigger className={cn(triggerClass)}>{trigger}</SheetTrigger>
+      <SheetTrigger asChild className={cn(triggerClass)}>
+        {trigger}
+      </SheetTrigger>
       <SheetContent
         className={cn(
           "bg-clip-padding backdrop-filter backdrop--blur__safari backdrop-blur-3xl bg-opacity-20 bg-themeGray border-themeGray",
